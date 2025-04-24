@@ -23,9 +23,11 @@ body {
 
 .container {
     position: relative;
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     z-index: 1;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .card {
@@ -89,7 +91,7 @@ body {
     width: 100%;
     position: relative;
     z-index: 2;
-    padding: 50px;
+    padding: 40px 20px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -104,7 +106,7 @@ body {
 }
 
 .logo {
-    max-width: 300px;
+    max-width: 85%;
     margin: 0 auto 20px;
 }
 
@@ -148,4 +150,75 @@ body {
     margin: 40px auto 10px;
     display: flex;
     justify-content: center;
+}
+
+.badge-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .card-content {
+        padding: 30px 15px;
+    }
+    
+    .description h1 {
+        font-size: 2.2em;
+    }
+    
+    .description .subtitle {
+        font-size: 1em;
+    }
+    
+    .description h2 {
+        font-size: 1.6em;
+    }
+    
+    .card::after {
+        top: -8%;
+        left: -8%;
+        right: -8%;
+        bottom: -8%;
+        filter: blur(40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .card-content {
+        padding: 25px 12px;
+        border-radius: 0.8rem;
+    }
+    
+    .description h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+    
+    .description .subtitle {
+        font-size: 0.9em;
+        margin-bottom: 25px;
+    }
+    
+    .description h2 {
+        font-size: 1.4em;
+        margin-top: 30px;
+    }
+    
+    .card::after {
+        top: -10%;
+        left: -10%;
+        right: -10%;
+        bottom: -10%;
+        filter: blur(30px);
+    }
+    
+    .logo {
+        max-width: 75%;
+    }
 } 
